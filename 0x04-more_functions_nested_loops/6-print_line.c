@@ -1,27 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_line - entry point
- *
- * Description: Prints lines
- *@n: number of lines
- * Return: void
+ * print_line - check for a digit
+ * @n : number of _ to be printed
+ * Return:void
  */
 
 void print_line(int n)
 {
-	int num_lines;
 
-	if (n <= 0)
+	int i = 0;
+
+	while (i < n && n > 0)
 	{
-		_putchar('\n');
+		_putchar('_');
+		i++;
 	}
-	else
-	{
-		for (num_lines = 1; num_lines <= n; num_lines++)
-		{
-			_putchar('_');
-		}
-		_putchar('\n');
-	}
+	_putchar('\n');
+
 }

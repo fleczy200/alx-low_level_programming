@@ -1,30 +1,29 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_square - entry point
- *
- * Description: Prints square
- *@size: size of square
- * Return: void
+ * print_square - check for a digit
+ * @n : number of _ to be printed
+ * Return:void
  */
 
-void print_square(int size)
+void print_square(int n)
 {
-	int row, column;
 
-	if (size <= 0)
+	int i = 0, ii;
+
+	while (i < n && n > 0)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (row = 1; row <= size; row++)
+		ii = 0;
+		while (ii < n)
 		{
-			for (column = 1; column <= size; column++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			_putchar('#');
+			ii++;
 		}
+
+		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
+
 }

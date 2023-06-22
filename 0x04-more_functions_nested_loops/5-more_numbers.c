@@ -1,28 +1,32 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * more_numbers - entry point
- *
- * Description: Prints the numbers with _putchar
- *
- * Return: void
+ * more_numbers - prints more numbers
+ * Return:void
  */
 
 void more_numbers(void)
 {
-	int number, tens, units, row;
+	char n, c;
+	int i = 0;
 
-	for (row = 1; row <= 10; row++)
+
+	while (i < 10)
 	{
-		for (number = 0; number <= 14; number++)
+		for (n = 0; n <= 14; n++)
 		{
-			tens = number / 10;
-			units = number % 10;
-			if (number > 9)
-				_putchar(tens + '0');
+			c = n;
+			if (n > 9)
+			{
+				_putchar('1');
+				c = n % 10;
+			}
 
-			_putchar(units + '0');
+			_putchar('0' + c);
 		}
+
 		_putchar('\n');
+		i++;
 	}
+
 }
